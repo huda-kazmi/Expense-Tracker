@@ -1,0 +1,23 @@
+# Expense Tracker
+# Project 2 - DecodeLabs
+# Huda Kazmi
+
+total = 0
+
+print("Expense Tracker")
+print("Type quit to stop")
+
+while True:
+    entry = input("Enter expense: ")
+    
+    if entry == "quit":
+        break
+    
+    try:
+        expense = float(entry)
+        total = total + expense
+        print("Added! Total so far:", total)
+    except ValueError:
+        print("Invalid! Enter a number")
+
+print("Final Total:", total)
